@@ -1,4 +1,4 @@
-"""ResNet18 with the center-frame temporal transformer."""
+"""CNNTransformer with a ResNet18 encoder and center-frame temporal readout."""
 
 import math
 import torch
@@ -59,7 +59,7 @@ class TemporalPositionalEncoding(nn.Module):
         return self.dropout(x)
 
 
-class CenterFrameResNetTransformerModel(nn.Module):
+class CNNTransformer(nn.Module):
     def __init__(self, num_classes, d_model=256, nhead=8, num_layers=4, dim_feedforward=1024, dropout=0.1):
         super().__init__()
         self.resnet_encoder = ResNetEncoder(output_features=d_model)

@@ -1,35 +1,55 @@
-# ResNet-transformer
+# CNNTransformer
 
-`model.py` retains the ResNet18 grayscale frame encoder and two temporal
-transformer variants present in the development code. Their forward operations
-are preserved; personal-name class prefixes were replaced with descriptive
-names. Neither data loading nor training is included.
+`CNNTransformer` is the supervised baseline called CNN-transformer in the
+paper's implementation details and ResNet-transformer in its model overview
+and results. This folder contains only the confirmed center-frame implementation.
 
-| Class | Source behavior |
-| --- | --- |
-| `ResNetTransformerModel` | Legacy positional encoding, then temporal mean pooling |
-| `CenterFrameResNetTransformerModel` | Temporal positional encoding, then center-frame selection |
+An ImageNet-pretrained ResNet18 encodes each grayscale frame, with a new
+one-channel input convolution and a linear projection to `d_model` features.
+Sinusoidal positional encoding and a batch-first transformer encoder model the
+full temporal sequence. The output feature at zero-based index `T // 2` is
+passed to the final linear classifier. The legacy mean-pooling implementation
+is not included.
 
-The legacy positional encoder indexes the first tensor axis even though the
-transformer receives batch-first tensors. It is retained as implemented for
-checkpoint comparison; it is not silently corrected here. The center-frame
-variant is used by the later clip-based model factory. The exact variant behind
-each paper result still needs confirmation.
+## Input and output
 
-Input: `[batch, frames, 1, height, width]`. Output: two logits ordered
-`[nonscratching, scratching]`. The model itself does not sample or pad frames.
+Input: `[batch, T, 1, height, width]`, a floating-point tensor of grayscale
+frames. The supplied encoder requires one channel; converting or adapting
+three-channel preprocessed clips is the caller's responsibility. Spatial
+resizing and normalization are also performed outside this model.
 
-Install this folder's `requirements.txt` in a dedicated environment. Example
-construction from the repository root with the clip-based factory defaults:
+The model accepts variable `T`, up to the positional encoding capacity of
+1,000 frames, and selects the center-frame feature of the supplied sequence.
+It does not sample, pad or resample frames. With `num_classes=2`, output is
+`[batch, 2]` raw logits ordered `[nonscratching, scratching]`, without softmax.
+
+## Construction
+
+Install this folder's `requirements.txt` in a dedicated environment. From the
+repository root:
 
 ```python
-from resnet_transformer import CenterFrameResNetTransformerModel
+from resnet_transformer import CNNTransformer
 
-model = CenterFrameResNetTransformerModel(
-    num_classes=2, d_model=256, nhead=8, num_layers=4,
-    dim_feedforward=512, dropout=0.3,
+model = CNNTransformer(
+    num_classes=2,
+    d_model=256,
+    nhead=8,
+    num_layers=4,
+    dim_feedforward=1024,
+    dropout=0.1,
 )
 ```
 
-Construction requests torchvision's ResNet18 pretrained weights. A task-trained
-checkpoint and its matching constructor values are needed for predictions.
+This example explicitly uses the defaults of the supplied model class; it does
+not specify a training configuration or reproduce paper scores. Construction
+requests torchvision's ResNet18 pretrained weights. The replacement input
+convolution, feature projection, transformer and classifier still require
+task-specific training.
+
+For inference, instantiate the architecture with the settings that match the
+task-trained checkpoint, load its `state_dict` and call `model.eval()`.
+The name `CNNTransformer` replaces `CenterFrameResNetTransformerModel` without
+changing module attributes, `state_dict` keys or forward computations. Data
+loading, preprocessing, training and evaluation pipelines are outside this
+folder's scope.

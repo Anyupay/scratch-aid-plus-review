@@ -9,7 +9,7 @@ Each model has its own folder. The binary label convention is
 | Folder | Included content |
 | --- | --- |
 | [scratchaid_crnn](scratchaid_crnn/) | Original ResNet18 encoder and recurrent decoder |
-| [resnet_transformer](resnet_transformer/) | ResNet18 with temporal transformer variants |
+| [resnet_transformer](resnet_transformer/) | CNNTransformer: ResNet18 with center-frame temporal readout |
 | [internvideo_next](internvideo_next/) | Base classifier, attentive probe and LoRA implementation |
 | [video_swin](video_swin/) | Standalone Swin-B model configuration for MMAction2 |
 | [videomae](videomae/) | VideoMAE classifier core and ViT-B/16 / ViT-L/16 factories |
@@ -27,7 +27,7 @@ without installing a model runtime.
 
 Model construction initializes a network; it does not reproduce paper scores.
 Task checkpoints and their matching settings are necessary for evaluation.
-The baseline variant-to-result mapping is documented in its model folder.
+Model-specific architectures and input contracts are documented in each folder.
 
 ## Adding or updating a model
 
