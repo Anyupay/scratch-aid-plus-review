@@ -1,7 +1,7 @@
-# Scratch-AID+: Core Models and ICL Prompts
+# Scratch-AID+: Core Models, ICL Prompts and Supplementary Materials
 
-Minimal code companion for **Scratch-AID+: Cross-Laboratory Evaluation of
-Supervised and Foundation Models for Mouse Scratching Detection**.
+Code and supplementary companion for the **Scratch-AID+** mouse scratching
+detection benchmark.
 
 Each model has its own folder. The binary label convention is
 `0 = nonscratching`, `1 = scratching`.
@@ -16,11 +16,29 @@ Each model has its own folder. The binary label convention is
 | [gemini](gemini/) | Gemini 3.1 Flash-Lite prompts and retrieval/request settings |
 | [qwen3_vl](qwen3_vl/) | Exact zero-, two- and four-shot prompts and source settings |
 
+## Supplementary materials
+
+- [Table S1: detailed benchmark results](supplementary/table_s1.md), including
+  accuracy and scratching-class F1 for Realistic and Curated, plus downloadable
+  per-configuration and configuration-mean CSVs.
+- [Supplementary implementation details](supplementary/implementation_details.md):
+  model-specific inputs, optimization, checkpoint selection and ICL settings.
+- [Table S2: Curated-to-Realistic checkpoint transfer](supplementary/table_s2.md),
+  with a downloadable CSV for both test domains.
+
+S1 distinguishes full-test trainable models from frozen MLLMs evaluated on
+balanced subsamples. Complete detailed results are available for VideoSwin,
+InternVideo-Next, Gemini and Qwen; unavailable detailed values for Scratch-AID,
+CNNTransformer and VideoMAE are marked NR. Manuscript-reported F1 means and the
+available external Realistic F1 values are preserved. See the
+[supplementary index](supplementary/README.md) for coverage and file descriptions.
+
 ## Scope and use
 
-This repository contains core model definitions and ICL prompts. Data,
-preprocessing, training and evaluation pipelines, checkpoints, logs and generated
-results are outside its scope. Follow each folder's README for its input
+This repository contains core model definitions, ICL prompts and reported
+supplementary methods/results. Raw data, preprocessing, training and evaluation
+pipelines, checkpoints, logs and per-clip predictions are outside its scope.
+Follow each folder's README for its input
 contract, dependencies and a model-construction example. Use separate
 environments where model dependencies differ. ICL prompt files can be read
 without installing a model runtime.
@@ -34,9 +52,9 @@ Model-specific architectures and input contracts are documented in each folder.
 Keep one folder per model, containing only its core implementation or prompts,
 minimal dependencies and a short README. Preserve the source computations and
 prompt wording. Avoid author names, institutional paths, private repository
-links, credentials, datasets and generated outputs. Retain applicable upstream
-licenses and attribution. Optional supplementary methods/results should be
-anonymous and clearly identify their evaluation protocol.
+links, credentials, datasets and run outputs. Retain applicable upstream
+licenses and attribution. Supplementary methods/results should be anonymous,
+identify their evaluation protocol and preserve missing values explicitly.
 
 ## Third-party components
 
