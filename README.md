@@ -27,11 +27,10 @@ Each model has its own folder. The binary label convention is
   with a downloadable CSV for both test domains.
 
 S1 distinguishes full-test trainable models from frozen MLLMs evaluated on
-balanced subsamples. Complete detailed results are available for VideoSwin,
-InternVideo-Next, Gemini and Qwen; unavailable detailed values for Scratch-AID,
-CNNTransformer and VideoMAE are marked NR. Manuscript-reported F1 means and the
-available external Realistic F1 values are preserved. See the
-[supplementary index](supplementary/README.md) for coverage and file descriptions.
+balanced subsamples. Detailed accuracy and scratching-class F1 are complete
+for all seven models, both protocols and all six preprocessing configurations.
+Configuration means reconcile with manuscript Table II. See the
+[supplementary index](supplementary/README.md) for sources and file descriptions.
 
 ## Scope and use
 

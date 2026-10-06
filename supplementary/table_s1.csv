@@ -1,22 +1,22 @@
 model,model_group,protocol,crop,appearance,in_lab_accuracy_pct,in_lab_f1_pct,external_accuracy_pct,external_f1_pct,in_lab_accuracy_sd_pct,in_lab_f1_sd_pct,external_accuracy_sd_pct,external_f1_sd_pct,n_subsampling_repeats,estimate_scope,source_kind
-Scratch-AID,Trainable,Realistic,Per-Frame,None,,,,65.19000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-Scratch-AID,Trainable,Realistic,Per-Frame,Gray,,,,60.71000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-Scratch-AID,Trainable,Realistic,Per-Frame,Color Jitter,,,,66.12000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-Scratch-AID,Trainable,Realistic,Motion-Gradient,None,,,,67.62000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-Scratch-AID,Trainable,Realistic,Motion-Gradient,Gray,,,,62.20000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-Scratch-AID,Trainable,Realistic,Motion-Gradient,Color Jitter,,,,76.01000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-CNNTransformer (ResNet-transformer),Trainable,Realistic,Per-Frame,None,,,,69.27000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-CNNTransformer (ResNet-transformer),Trainable,Realistic,Per-Frame,Gray,,,,66.90000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-CNNTransformer (ResNet-transformer),Trainable,Realistic,Per-Frame,Color Jitter,,,,79.06000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-CNNTransformer (ResNet-transformer),Trainable,Realistic,Motion-Gradient,None,,,,70.21000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-CNNTransformer (ResNet-transformer),Trainable,Realistic,Motion-Gradient,Gray,,,,72.97000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-CNNTransformer (ResNet-transformer),Trainable,Realistic,Motion-Gradient,Color Jitter,,,,68.81000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-VideoMAE,Trainable,Realistic,Per-Frame,None,,,,81.98000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-VideoMAE,Trainable,Realistic,Per-Frame,Gray,,,,82.41000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-VideoMAE,Trainable,Realistic,Per-Frame,Color Jitter,,,,82.00000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-VideoMAE,Trainable,Realistic,Motion-Gradient,None,,,,83.00000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-VideoMAE,Trainable,Realistic,Motion-Gradient,Gray,,,,82.81000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
-VideoMAE,Trainable,Realistic,Motion-Gradient,Color Jitter,,,,82.73000000,,,,,,full test set,manuscript Figure 2; other detailed metrics not available
+Scratch-AID,Trainable,Realistic,Per-Frame,None,98.45000000,96.14000000,95.61000000,65.19000000,,,,,,full test set,provided benchmark summary
+Scratch-AID,Trainable,Realistic,Per-Frame,Gray,98.43000000,96.00000000,95.18000000,60.71000000,,,,,,full test set,provided benchmark summary
+Scratch-AID,Trainable,Realistic,Per-Frame,Color Jitter,98.19000000,95.50000000,94.05000000,66.12000000,,,,,,full test set,provided benchmark summary
+Scratch-AID,Trainable,Realistic,Motion-Gradient,None,98.75000000,96.88000000,95.03000000,67.62000000,,,,,,full test set,provided benchmark summary
+Scratch-AID,Trainable,Realistic,Motion-Gradient,Gray,98.33000000,95.86000000,93.39000000,62.20000000,,,,,,full test set,provided benchmark summary
+Scratch-AID,Trainable,Realistic,Motion-Gradient,Color Jitter,98.19000000,95.52000000,96.05000000,76.01000000,,,,,,full test set,provided benchmark summary
+CNNTransformer (ResNet-transformer),Trainable,Realistic,Per-Frame,None,98.43000000,96.06000000,95.18000000,69.27000000,,,,,,full test set,provided benchmark summary
+CNNTransformer (ResNet-transformer),Trainable,Realistic,Per-Frame,Gray,98.51000000,96.28000000,95.86000000,66.90000000,,,,,,full test set,provided benchmark summary
+CNNTransformer (ResNet-transformer),Trainable,Realistic,Per-Frame,Color Jitter,98.45000000,96.15000000,96.73000000,79.06000000,,,,,,full test set,provided benchmark summary
+CNNTransformer (ResNet-transformer),Trainable,Realistic,Motion-Gradient,None,98.83000000,97.07000000,96.00000000,70.21000000,,,,,,full test set,provided benchmark summary
+CNNTransformer (ResNet-transformer),Trainable,Realistic,Motion-Gradient,Gray,98.91000000,97.26000000,96.22000000,72.97000000,,,,,,full test set,provided benchmark summary
+CNNTransformer (ResNet-transformer),Trainable,Realistic,Motion-Gradient,Color Jitter,98.71000000,96.75000000,94.33000000,68.81000000,,,,,,full test set,provided benchmark summary
+VideoMAE,Trainable,Realistic,Per-Frame,None,98.79000000,96.94000000,97.06000000,81.98000000,,,,,,full test set,provided benchmark summary
+VideoMAE,Trainable,Realistic,Per-Frame,Gray,98.75000000,96.87000000,97.14000000,82.41000000,,,,,,full test set,provided benchmark summary
+VideoMAE,Trainable,Realistic,Per-Frame,Color Jitter,98.73000000,96.82000000,97.03000000,82.00000000,,,,,,full test set,provided benchmark summary
+VideoMAE,Trainable,Realistic,Motion-Gradient,None,98.93000000,97.32000000,97.21000000,83.00000000,,,,,,full test set,provided benchmark summary
+VideoMAE,Trainable,Realistic,Motion-Gradient,Gray,98.67000000,96.65000000,97.22000000,82.81000000,,,,,,full test set,provided benchmark summary
+VideoMAE,Trainable,Realistic,Motion-Gradient,Color Jitter,98.97000000,97.42000000,97.17000000,82.73000000,,,,,,full test set,provided benchmark summary
 VideoSwin,Trainable,Realistic,Per-Frame,None,98.91216761,97.24208376,96.29351096,75.89098532,,,,,,full test set,saved experiment metrics
 VideoSwin,Trainable,Realistic,Per-Frame,Gray,98.75100725,96.85916920,97.04555221,80.30085960,,,,,,full test set,saved experiment metrics
 VideoSwin,Trainable,Realistic,Per-Frame,Color Jitter,98.85173247,97.10512951,96.34185647,77.54698318,,,,,,full test set,saved experiment metrics
@@ -41,24 +41,24 @@ Qwen3-VL,Frozen MLLM,Realistic,Per-Frame,Color Jitter,78.83333333,79.06333333,75
 Qwen3-VL,Frozen MLLM,Realistic,Motion-Gradient,None,82.66666667,82.04333333,78.00000000,74.95000000,2.84312035,4.63035996,3.77491722,4.74951576,3,balanced subsamples,saved experiment metrics
 Qwen3-VL,Frozen MLLM,Realistic,Motion-Gradient,Gray,80.16666667,80.03000000,75.66666667,72.22000000,4.61880215,5.64382849,2.02072594,2.57745999,3,balanced subsamples,saved experiment metrics
 Qwen3-VL,Frozen MLLM,Realistic,Motion-Gradient,Color Jitter,80.33333333,79.60666667,76.66666667,73.22000000,2.92973264,2.76134629,3.54729944,3.63335933,3,balanced subsamples,saved experiment metrics
-Scratch-AID,Trainable,Curated,Per-Frame,None,,,,,,,,,,full test set,not available
-Scratch-AID,Trainable,Curated,Per-Frame,Gray,,,,,,,,,,full test set,not available
-Scratch-AID,Trainable,Curated,Per-Frame,Color Jitter,,,,,,,,,,full test set,not available
-Scratch-AID,Trainable,Curated,Motion-Gradient,None,,,,,,,,,,full test set,not available
-Scratch-AID,Trainable,Curated,Motion-Gradient,Gray,,,,,,,,,,full test set,not available
-Scratch-AID,Trainable,Curated,Motion-Gradient,Color Jitter,,,,,,,,,,full test set,not available
-CNNTransformer (ResNet-transformer),Trainable,Curated,Per-Frame,None,,,,,,,,,,full test set,not available
-CNNTransformer (ResNet-transformer),Trainable,Curated,Per-Frame,Gray,,,,,,,,,,full test set,not available
-CNNTransformer (ResNet-transformer),Trainable,Curated,Per-Frame,Color Jitter,,,,,,,,,,full test set,not available
-CNNTransformer (ResNet-transformer),Trainable,Curated,Motion-Gradient,None,,,,,,,,,,full test set,not available
-CNNTransformer (ResNet-transformer),Trainable,Curated,Motion-Gradient,Gray,,,,,,,,,,full test set,not available
-CNNTransformer (ResNet-transformer),Trainable,Curated,Motion-Gradient,Color Jitter,,,,,,,,,,full test set,not available
-VideoMAE,Trainable,Curated,Per-Frame,None,,,,,,,,,,full test set,not available
-VideoMAE,Trainable,Curated,Per-Frame,Gray,,,,,,,,,,full test set,not available
-VideoMAE,Trainable,Curated,Per-Frame,Color Jitter,,,,,,,,,,full test set,not available
-VideoMAE,Trainable,Curated,Motion-Gradient,None,,,,,,,,,,full test set,not available
-VideoMAE,Trainable,Curated,Motion-Gradient,Gray,,,,,,,,,,full test set,not available
-VideoMAE,Trainable,Curated,Motion-Gradient,Color Jitter,,,,,,,,,,full test set,not available
+Scratch-AID,Trainable,Curated,Per-Frame,None,99.70000000,99.70000000,81.71000000,79.07000000,,,,,,full test set,provided benchmark summary
+Scratch-AID,Trainable,Curated,Per-Frame,Gray,99.74000000,99.74000000,85.29000000,82.90000000,,,,,,full test set,provided benchmark summary
+Scratch-AID,Trainable,Curated,Per-Frame,Color Jitter,99.65000000,99.65000000,91.23000000,90.72000000,,,,,,full test set,provided benchmark summary
+Scratch-AID,Trainable,Curated,Motion-Gradient,None,99.82000000,99.82000000,86.96000000,85.27000000,,,,,,full test set,provided benchmark summary
+Scratch-AID,Trainable,Curated,Motion-Gradient,Gray,99.72000000,99.72000000,84.37000000,81.71000000,,,,,,full test set,provided benchmark summary
+Scratch-AID,Trainable,Curated,Motion-Gradient,Color Jitter,99.41000000,99.41000000,93.03000000,92.71000000,,,,,,full test set,provided benchmark summary
+CNNTransformer (ResNet-transformer),Trainable,Curated,Per-Frame,None,99.79000000,99.79000000,78.32000000,72.54000000,,,,,,full test set,provided benchmark summary
+CNNTransformer (ResNet-transformer),Trainable,Curated,Per-Frame,Gray,99.56000000,99.56000000,88.47000000,87.18000000,,,,,,full test set,provided benchmark summary
+CNNTransformer (ResNet-transformer),Trainable,Curated,Per-Frame,Color Jitter,99.61000000,99.61000000,93.12000000,92.87000000,,,,,,full test set,provided benchmark summary
+CNNTransformer (ResNet-transformer),Trainable,Curated,Motion-Gradient,None,99.64000000,99.64000000,87.54000000,86.00000000,,,,,,full test set,provided benchmark summary
+CNNTransformer (ResNet-transformer),Trainable,Curated,Motion-Gradient,Gray,99.84000000,99.84000000,87.05000000,85.34000000,,,,,,full test set,provided benchmark summary
+CNNTransformer (ResNet-transformer),Trainable,Curated,Motion-Gradient,Color Jitter,99.62000000,99.62000000,91.75000000,91.29000000,,,,,,full test set,provided benchmark summary
+VideoMAE,Trainable,Curated,Per-Frame,None,99.90000000,99.90000000,94.87000000,94.67000000,,,,,,full test set,provided benchmark summary
+VideoMAE,Trainable,Curated,Per-Frame,Gray,99.90000000,99.90000000,95.29000000,95.12000000,,,,,,full test set,provided benchmark summary
+VideoMAE,Trainable,Curated,Per-Frame,Color Jitter,99.91000000,99.91000000,95.40000000,95.26000000,,,,,,full test set,provided benchmark summary
+VideoMAE,Trainable,Curated,Motion-Gradient,None,99.95000000,99.95000000,95.40000000,95.23000000,,,,,,full test set,provided benchmark summary
+VideoMAE,Trainable,Curated,Motion-Gradient,Gray,99.92000000,99.92000000,95.34000000,95.19000000,,,,,,full test set,provided benchmark summary
+VideoMAE,Trainable,Curated,Motion-Gradient,Color Jitter,99.93000000,99.93000000,94.98000000,94.78000000,,,,,,full test set,provided benchmark summary
 VideoSwin,Trainable,Curated,Per-Frame,None,99.79943843,99.79915646,90.44841158,89.64413625,,,,,,full test set,saved experiment metrics
 VideoSwin,Trainable,Curated,Per-Frame,Gray,99.70918572,99.70886457,93.70255834,93.36689369,,,,,,full test set,saved experiment metrics
 VideoSwin,Trainable,Curated,Per-Frame,Color Jitter,99.57882070,99.57754979,94.68653360,94.55566758,,,,,,full test set,saved experiment metrics

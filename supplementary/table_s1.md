@@ -1,9 +1,10 @@
 # Table S1. Detailed benchmark results
 
-Accuracy and scratching-class (class-1) F1 are percentages. This table
-assembles the results available in the manuscript and saved experiment
-records. **NR means the detailed value was not provided in the available
-sources; it is not zero and is not an inapplicable condition.**
+Accuracy and scratching-class (class-1) F1 are percentages. All 84 model,
+protocol and preprocessing combinations have complete accuracy and F1
+for both in-lab and external tests. The supplied benchmark summary completes
+the Scratch-AID, CNNTransformer and VideoMAE entries; archived experiment
+records retain their original precision for the other models.
 
 Downloads: [per-configuration CSV](table_s1.csv) and
 [configuration-mean CSV](table_s1_configuration_means.csv).
@@ -31,22 +32,22 @@ stored source metrics.
 
 ## Configuration means corresponding to manuscript Table II
 
-F1 means below reproduce the current manuscript. Accuracy means are
-calculated only when all six detailed accuracy values are available;
-Scratch-AID's external Realistic accuracy mean is reported in the manuscript.
+F1 means below reproduce the manuscript and reconcile with the six detailed
+configuration values at the reported precision. Accuracy means are calculated
+from the six detailed accuracy values for every model and protocol.
 
 | Model | Protocol | In-lab accuracy | In-lab F1 | External accuracy | External F1 |
 | --- | --- | ---: | ---: | ---: | ---: |
-| Scratch-AID | Realistic | NR | 95.98 | 94.89 | 66.31 |
-| CNNTransformer (ResNet-transformer) | Realistic | NR | 96.60 | NR | 71.20 |
-| VideoMAE | Realistic | NR | 97.00 | NR | 82.49 |
+| Scratch-AID | Realistic | 98.39 | 95.98 | 94.88 | 66.31 |
+| CNNTransformer (ResNet-transformer) | Realistic | 98.64 | 96.60 | 95.72 | 71.20 |
+| VideoMAE | Realistic | 98.81 | 97.00 | 97.14 | 82.49 |
 | VideoSwin | Realistic | 98.81 | 97.03 | 96.44 | 78.12 |
 | InternVideo-Next | Realistic | 98.81 | 96.99 | 97.05 | 81.19 |
 | Gemini 3.1 Flash-Lite | Realistic | 78.31 | 77.50 | 75.67 | 75.07 |
 | Qwen3-VL | Realistic | 80.53 | 80.15 | 75.69 | 72.43 |
-| Scratch-AID | Curated | NR | 99.67 | NR | 85.40 |
-| CNNTransformer (ResNet-transformer) | Curated | NR | 99.68 | NR | 85.87 |
-| VideoMAE | Curated | NR | 99.92 | NR | 95.04 |
+| Scratch-AID | Curated | 99.67 | 99.67 | 87.10 | 85.40 |
+| CNNTransformer (ResNet-transformer) | Curated | 99.68 | 99.68 | 87.71 | 85.87 |
+| VideoMAE | Curated | 99.92 | 99.92 | 95.21 | 95.04 |
 | VideoSwin | Curated | 99.76 | 99.76 | 93.33 | 93.00 |
 | InternVideo-Next | Curated | 99.86 | 99.86 | 95.41 | 95.26 |
 | Gemini 3.1 Flash-Lite | Curated | 78.05 | 77.07 | 74.64 | 73.19 |
@@ -56,24 +57,24 @@ Scratch-AID's external Realistic accuracy mean is reported in the manuscript.
 
 | Model | Crop | Appearance | In-lab accuracy | In-lab F1 | External accuracy | External F1 |
 | --- | --- | --- | ---: | ---: | ---: | ---: |
-| Scratch-AID | Per-Frame | None | NR | NR | NR | 65.19 |
-| Scratch-AID | Per-Frame | Gray | NR | NR | NR | 60.71 |
-| Scratch-AID | Per-Frame | Color Jitter | NR | NR | NR | 66.12 |
-| Scratch-AID | Motion-Gradient | None | NR | NR | NR | 67.62 |
-| Scratch-AID | Motion-Gradient | Gray | NR | NR | NR | 62.20 |
-| Scratch-AID | Motion-Gradient | Color Jitter | NR | NR | NR | 76.01 |
-| CNNTransformer (ResNet-transformer) | Per-Frame | None | NR | NR | NR | 69.27 |
-| CNNTransformer (ResNet-transformer) | Per-Frame | Gray | NR | NR | NR | 66.90 |
-| CNNTransformer (ResNet-transformer) | Per-Frame | Color Jitter | NR | NR | NR | 79.06 |
-| CNNTransformer (ResNet-transformer) | Motion-Gradient | None | NR | NR | NR | 70.21 |
-| CNNTransformer (ResNet-transformer) | Motion-Gradient | Gray | NR | NR | NR | 72.97 |
-| CNNTransformer (ResNet-transformer) | Motion-Gradient | Color Jitter | NR | NR | NR | 68.81 |
-| VideoMAE | Per-Frame | None | NR | NR | NR | 81.98 |
-| VideoMAE | Per-Frame | Gray | NR | NR | NR | 82.41 |
-| VideoMAE | Per-Frame | Color Jitter | NR | NR | NR | 82.00 |
-| VideoMAE | Motion-Gradient | None | NR | NR | NR | 83.00 |
-| VideoMAE | Motion-Gradient | Gray | NR | NR | NR | 82.81 |
-| VideoMAE | Motion-Gradient | Color Jitter | NR | NR | NR | 82.73 |
+| Scratch-AID | Per-Frame | None | 98.45 | 96.14 | 95.61 | 65.19 |
+| Scratch-AID | Per-Frame | Gray | 98.43 | 96.00 | 95.18 | 60.71 |
+| Scratch-AID | Per-Frame | Color Jitter | 98.19 | 95.50 | 94.05 | 66.12 |
+| Scratch-AID | Motion-Gradient | None | 98.75 | 96.88 | 95.03 | 67.62 |
+| Scratch-AID | Motion-Gradient | Gray | 98.33 | 95.86 | 93.39 | 62.20 |
+| Scratch-AID | Motion-Gradient | Color Jitter | 98.19 | 95.52 | 96.05 | 76.01 |
+| CNNTransformer (ResNet-transformer) | Per-Frame | None | 98.43 | 96.06 | 95.18 | 69.27 |
+| CNNTransformer (ResNet-transformer) | Per-Frame | Gray | 98.51 | 96.28 | 95.86 | 66.90 |
+| CNNTransformer (ResNet-transformer) | Per-Frame | Color Jitter | 98.45 | 96.15 | 96.73 | 79.06 |
+| CNNTransformer (ResNet-transformer) | Motion-Gradient | None | 98.83 | 97.07 | 96.00 | 70.21 |
+| CNNTransformer (ResNet-transformer) | Motion-Gradient | Gray | 98.91 | 97.26 | 96.22 | 72.97 |
+| CNNTransformer (ResNet-transformer) | Motion-Gradient | Color Jitter | 98.71 | 96.75 | 94.33 | 68.81 |
+| VideoMAE | Per-Frame | None | 98.79 | 96.94 | 97.06 | 81.98 |
+| VideoMAE | Per-Frame | Gray | 98.75 | 96.87 | 97.14 | 82.41 |
+| VideoMAE | Per-Frame | Color Jitter | 98.73 | 96.82 | 97.03 | 82.00 |
+| VideoMAE | Motion-Gradient | None | 98.93 | 97.32 | 97.21 | 83.00 |
+| VideoMAE | Motion-Gradient | Gray | 98.67 | 96.65 | 97.22 | 82.81 |
+| VideoMAE | Motion-Gradient | Color Jitter | 98.97 | 97.42 | 97.17 | 82.73 |
 | VideoSwin | Per-Frame | None | 98.91 | 97.24 | 96.29 | 75.89 |
 | VideoSwin | Per-Frame | Gray | 98.75 | 96.86 | 97.05 | 80.30 |
 | VideoSwin | Per-Frame | Color Jitter | 98.85 | 97.11 | 96.34 | 77.55 |
@@ -108,24 +109,24 @@ Scratch-AID's external Realistic accuracy mean is reported in the manuscript.
 
 | Model | Crop | Appearance | In-lab accuracy | In-lab F1 | External accuracy | External F1 |
 | --- | --- | --- | ---: | ---: | ---: | ---: |
-| Scratch-AID | Per-Frame | None | NR | NR | NR | NR |
-| Scratch-AID | Per-Frame | Gray | NR | NR | NR | NR |
-| Scratch-AID | Per-Frame | Color Jitter | NR | NR | NR | NR |
-| Scratch-AID | Motion-Gradient | None | NR | NR | NR | NR |
-| Scratch-AID | Motion-Gradient | Gray | NR | NR | NR | NR |
-| Scratch-AID | Motion-Gradient | Color Jitter | NR | NR | NR | NR |
-| CNNTransformer (ResNet-transformer) | Per-Frame | None | NR | NR | NR | NR |
-| CNNTransformer (ResNet-transformer) | Per-Frame | Gray | NR | NR | NR | NR |
-| CNNTransformer (ResNet-transformer) | Per-Frame | Color Jitter | NR | NR | NR | NR |
-| CNNTransformer (ResNet-transformer) | Motion-Gradient | None | NR | NR | NR | NR |
-| CNNTransformer (ResNet-transformer) | Motion-Gradient | Gray | NR | NR | NR | NR |
-| CNNTransformer (ResNet-transformer) | Motion-Gradient | Color Jitter | NR | NR | NR | NR |
-| VideoMAE | Per-Frame | None | NR | NR | NR | NR |
-| VideoMAE | Per-Frame | Gray | NR | NR | NR | NR |
-| VideoMAE | Per-Frame | Color Jitter | NR | NR | NR | NR |
-| VideoMAE | Motion-Gradient | None | NR | NR | NR | NR |
-| VideoMAE | Motion-Gradient | Gray | NR | NR | NR | NR |
-| VideoMAE | Motion-Gradient | Color Jitter | NR | NR | NR | NR |
+| Scratch-AID | Per-Frame | None | 99.70 | 99.70 | 81.71 | 79.07 |
+| Scratch-AID | Per-Frame | Gray | 99.74 | 99.74 | 85.29 | 82.90 |
+| Scratch-AID | Per-Frame | Color Jitter | 99.65 | 99.65 | 91.23 | 90.72 |
+| Scratch-AID | Motion-Gradient | None | 99.82 | 99.82 | 86.96 | 85.27 |
+| Scratch-AID | Motion-Gradient | Gray | 99.72 | 99.72 | 84.37 | 81.71 |
+| Scratch-AID | Motion-Gradient | Color Jitter | 99.41 | 99.41 | 93.03 | 92.71 |
+| CNNTransformer (ResNet-transformer) | Per-Frame | None | 99.79 | 99.79 | 78.32 | 72.54 |
+| CNNTransformer (ResNet-transformer) | Per-Frame | Gray | 99.56 | 99.56 | 88.47 | 87.18 |
+| CNNTransformer (ResNet-transformer) | Per-Frame | Color Jitter | 99.61 | 99.61 | 93.12 | 92.87 |
+| CNNTransformer (ResNet-transformer) | Motion-Gradient | None | 99.64 | 99.64 | 87.54 | 86.00 |
+| CNNTransformer (ResNet-transformer) | Motion-Gradient | Gray | 99.84 | 99.84 | 87.05 | 85.34 |
+| CNNTransformer (ResNet-transformer) | Motion-Gradient | Color Jitter | 99.62 | 99.62 | 91.75 | 91.29 |
+| VideoMAE | Per-Frame | None | 99.90 | 99.90 | 94.87 | 94.67 |
+| VideoMAE | Per-Frame | Gray | 99.90 | 99.90 | 95.29 | 95.12 |
+| VideoMAE | Per-Frame | Color Jitter | 99.91 | 99.91 | 95.40 | 95.26 |
+| VideoMAE | Motion-Gradient | None | 99.95 | 99.95 | 95.40 | 95.23 |
+| VideoMAE | Motion-Gradient | Gray | 99.92 | 99.92 | 95.34 | 95.19 |
+| VideoMAE | Motion-Gradient | Color Jitter | 99.93 | 99.93 | 94.98 | 94.78 |
 | VideoSwin | Per-Frame | None | 99.80 | 99.80 | 90.45 | 89.64 |
 | VideoSwin | Per-Frame | Gray | 99.71 | 99.71 | 93.70 | 93.37 |
 | VideoSwin | Per-Frame | Color Jitter | 99.58 | 99.58 | 94.69 | 94.56 |
@@ -156,14 +157,20 @@ Scratch-AID's external Realistic accuracy mean is reported in the manuscript.
 | Qwen3-VL | Motion-Gradient | Gray | 77.50 ± 3.04 | 80.63 ± 0.86 | 76.17 ± 1.26 | 76.92 ± 4.21 |
 | Qwen3-VL | Motion-Gradient | Color Jitter | 75.33 ± 2.47 | 78.17 ± 2.85 | 78.33 ± 5.03 | 77.11 ± 10.68 |
 
-## Coverage and model names
+## Sources and model names
 
-VideoSwin, InternVideo-Next, Gemini and Qwen3-VL have complete
-per-configuration accuracy and F1 in the saved records. For Scratch-AID,
-CNNTransformer and VideoMAE, Figure 2 supplies only the six external
-Realistic F1 values; their remaining detailed cells are NR. Their F1 means
-are retained separately from manuscript Table II. Missing detail has not
-been inferred from those means or filled using another model's results.
+The `full_benchmarking_results` sheet in the supplied `summary.xlsx` provides
+all twelve conditions for Scratch-AID, CNNTransformer and VideoMAE.
+The existing aggregate experiment records provide VideoSwin and
+InternVideo-Next metrics and the three-repeat MLLM estimates. Their stored
+values are retained rather than replaced by the workbook's rounded display
+values. The legacy `old_table` sheet is not used.
+
+For VideoSwin under Curated / Motion-Gradient / Gray, external accuracy is
+**93.99%**, confirmed by the archived confusion matrix (13,373 correct of
+14,228 clips). The summary workbook lists 93.70% for this accuracy cell,
+which matches the rounded scratching F1. This table retains the
+confusion-matrix accuracy; scratching F1 remains **93.70%**.
 
 CNNTransformer is the center-frame implementation called ResNet-transformer
 in the manuscript's overview and results. Gemini is 3.1 Flash-Lite;

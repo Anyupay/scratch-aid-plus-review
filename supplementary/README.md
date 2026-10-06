@@ -10,12 +10,12 @@ to construct these tables.
 | [Implementation details](implementation_details.md) | Per-model input, training, checkpoint selection and ICL settings moved from the manuscript's implementation notes | Markdown |
 | [Table S2](table_s2.md) | Curated-to-Realistic checkpoint transfer for VideoSwin and InternVideo-Next, with matched Realistic-trained comparisons | [CSV](table_s2.csv) |
 
-Table S1 has complete detailed accuracy and F1 for VideoSwin, InternVideo-Next,
-Gemini and Qwen3-VL. Scratch-AID, CNNTransformer and VideoMAE have the external
-Realistic F1 values shown in the manuscript figure and the F1 means in its
-summary table; their other per-configuration values are **NR (not reported in
-the available sources)**. The missing detailed values are not inferred from
-the reported means. CSV missing values are empty fields, not zeros.
+Table S1 contains all **336 accuracy and F1 values** across 84 model, protocol
+and preprocessing combinations. The supplied benchmark summary completes
+Scratch-AID, CNNTransformer and VideoMAE. Higher-precision stored records
+provide the other models. All 28 F1 configuration means reconcile with the
+manuscript at the reported precision. Table S1 documents the one discrepancy
+between the summary workbook and the archived VideoSwin accuracy record.
 
 Trainable models use full test sets. Frozen MLLMs use four-shot ICL on three
 repeated balanced subsamples per configuration. Their mean ± sample SD describes
