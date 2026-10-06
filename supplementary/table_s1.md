@@ -1,10 +1,8 @@
 # Table S1. Detailed benchmark results
 
-Accuracy and scratching-class (class-1) F1 are percentages. All 84 model,
-protocol and preprocessing combinations have complete accuracy and F1
-for both in-lab and external tests. The supplied benchmark summary completes
-the Scratch-AID, CNNTransformer and VideoMAE entries; archived experiment
-records retain their original precision for the other models.
+This table reports accuracy and scratching-class (class-1) F1, expressed as
+percentages, for seven models under two evaluation protocols and six
+preprocessing configurations, with both in-lab and external test results.
 
 Downloads: [per-configuration CSV](table_s1.csv) and
 [configuration-mean CSV](table_s1_configuration_means.csv).
@@ -18,8 +16,8 @@ contains 9,972 in-lab clips (4,986 scratching) and 14,228 external clips
 
 Frozen MLLMs use four-shot ICL and three repeated balanced subsamples per
 configuration, each targeting 200 test clips per domain (100 per class).
-Their cells show mean ± sample SD over the three repeats, using the stored
-accuracy and F1 estimates. The sample SD describes subsampling variability
+Their cells show mean ± sample SD over the three repeats. The sample SD
+describes subsampling variability
 and is not a confidence interval across animals or laboratories. These
 subsets differ in membership and prevalence from the trainable-model full
 tests, so cross-family comparisons are descriptive.
@@ -27,14 +25,12 @@ tests, so cross-family comparisons are descriptive.
 Means give each preprocessing configuration equal weight. They are not
 pooled clip-level F1. MLLM repeat estimates are averaged within each
 configuration first. Values are displayed to two decimal places; CSVs
-retain extra precision where available, including the precision of the
-stored source metrics.
+retain additional numerical precision where available.
 
 ## Configuration means corresponding to manuscript Table II
 
-F1 means below reproduce the manuscript and reconcile with the six detailed
-configuration values at the reported precision. Accuracy means are calculated
-from the six detailed accuracy values for every model and protocol.
+The F1 means correspond to manuscript Table II. Each accuracy mean averages
+the six detailed accuracy values for one model and protocol.
 
 | Model | Protocol | In-lab accuracy | In-lab F1 | External accuracy | External F1 |
 | --- | --- | ---: | ---: | ---: | ---: |
@@ -157,25 +153,11 @@ from the six detailed accuracy values for every model and protocol.
 | Qwen3-VL | Motion-Gradient | Gray | 77.50 ± 3.04 | 80.63 ± 0.86 | 76.17 ± 1.26 | 76.92 ± 4.21 |
 | Qwen3-VL | Motion-Gradient | Color Jitter | 75.33 ± 2.47 | 78.17 ± 2.85 | 78.33 ± 5.03 | 77.11 ± 10.68 |
 
-## Sources and model names
-
-The `full_benchmarking_results` sheet in the supplied `summary.xlsx` provides
-all twelve conditions for Scratch-AID, CNNTransformer and VideoMAE.
-The existing aggregate experiment records provide VideoSwin and
-InternVideo-Next metrics and the three-repeat MLLM estimates. Their stored
-values are retained rather than replaced by the workbook's rounded display
-values. The legacy `old_table` sheet is not used.
-
-For VideoSwin under Curated / Motion-Gradient / Gray, external accuracy is
-**93.99%**, confirmed by the archived confusion matrix (13,373 correct of
-14,228 clips). The summary workbook lists 93.70% for this accuracy cell,
-which matches the rounded scratching F1. This table retains the
-confusion-matrix accuracy; scratching F1 remains **93.70%**.
+## Model names
 
 CNNTransformer is the center-frame implementation called ResNet-transformer
 in the manuscript's overview and results. Gemini is 3.1 Flash-Lite;
-Qwen3-VL is the 32B-Instruct variant. Legacy source labels Sequential/seq
-and Primary/primary correspond to Realistic and Curated, respectively.
+Qwen3-VL is the 32B-Instruct variant.
 
 See [implementation details](implementation_details.md) for model settings
 and [Table S2](table_s2.md) for Curated-to-Realistic checkpoint transfer.

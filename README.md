@@ -30,7 +30,7 @@ S1 distinguishes full-test trainable models from frozen MLLMs evaluated on
 balanced subsamples. Detailed accuracy and scratching-class F1 are complete
 for all seven models, both protocols and all six preprocessing configurations.
 Configuration means reconcile with manuscript Table II. See the
-[supplementary index](supplementary/README.md) for sources and file descriptions.
+[supplementary index](supplementary/README.md) for evaluation protocols and file descriptions.
 
 ## Scope and use
 
